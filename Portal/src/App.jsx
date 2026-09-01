@@ -1,62 +1,16 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate
-} from "react-router-dom";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes';
+import { AuthProvider } from './context/AuthContext';
 
-import Login from "./pages/Auth/Login";
-import Admin from "./pages/Admin";
-import Hod from "./pages/Hod";
-import Staff from "./pages/Staff/Staff";
-import Student from "./pages/Student/Student";
-
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
-
-      <Routes>
-
-        {/* Default */}
-        <Route
-          path="/"
-          element={<Navigate to="/login" />}
-        />
-
-        {/* Login */}
-        <Route
-          path="/login"
-          element={<Login />}
-        />
-
-        {/* Admin */}
-        <Route
-          path="/admin"
-          element={<Admin />}
-        />
-
-        {/* HOD */}
-        <Route
-          path="/hod"
-          element={<Hod />}
-        />
-
-        {/* Staff */}
-        <Route
-          path="/staff"
-          element={<Staff />}
-        />
-
-        {/* Student */}
-        <Route
-          path="/student"
-          element={<Student />}
-        />
-
-      </Routes>
-
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
