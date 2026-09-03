@@ -29,7 +29,7 @@ function Login() {
 
     //Student--
     if(email.endsWith(".com") && uniqueId.startsWith("STD")){
-      Navigate("/Student")
+      Navigate("/Studentportal")
       return;
     }
 

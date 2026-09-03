@@ -1,5 +1,4 @@
 import {
-  BrowserRouter,
   Routes,
   Route,
   Navigate
@@ -7,55 +6,78 @@ import {
 
 import Login from "./pages/Auth/Login";
 import Admin from "./pages/Admin";
-import Hod from "./pages/Hod";
-import Staff from "./pages/Staff/Staff";
-import Student from "./pages/Student/Student";
+import Hod from "./pages/HOD/Hod";
+
+import StaffLayout from "./pages/Staff/StaffLayout.jsx";
+import StaffDashboard from "./pages/Staff/StaffDashboard.jsx";
+import Students from "./pages/Staff/MyStudent.jsx";
+import StudentPortal from "./pages/Staff/Studentportal.jsx";
+
+
+import Student from "./Component/Student/Student.jsx";
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <Routes>
 
-      <Routes>
+      {/* Default */}
+      <Route
+        path="/"
+        element={<Navigate to="/login" replace />}
+      />
 
-        {/* Default */}
+      {/* Login */}
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+      {/* Admin */}
+      <Route
+        path="/admin"
+        element={<Admin />}
+      />
+
+      {/* HOD */}
+      <Route
+        path="/hod"
+        element={<Hod />}
+      />
+
+
+      {/* ================= STAFF ================= */}
+
+      <Route
+        path="/staff"
+        element={<StaffLayout />}
+      >
+
+        {/* Staff Dashboard */}
         <Route
-          path="/"
-          element={<Navigate to="/login" />}
+          index 
+          element={<StaffDashboard />}
         />
 
-        {/* Login */}
-        <Route
-          path="/login"
-          element={<Login />}
-        />
+      </Route>
 
-        {/* Admin */}
-        <Route
-          path="/admin"
-          element={<Admin />}
-        />
 
-        {/* HOD */}
-        <Route
-          path="/hod"
-          element={<Hod />}
-        />
+      {/* Student */}
+      <Route path="/Staff/MyStudent" 
+      element={<Students />} />
 
-        {/* Staff */}
-        <Route
-          path="/staff"
-          element={<Staff />}
-        />
+     
+<Route 
+path="/studentportal"
+ element={<StudentPortal />} />
 
-        {/* Student */}
-        <Route
-          path="/student"
-          element={<Student />}
-        />
+      {/* Invalid URL */}
+      <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+      />
 
-      </Routes>
-
-    </BrowserRouter>
+    </Routes>
   );
 }
 

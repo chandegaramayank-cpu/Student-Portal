@@ -1,14 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "./StaffSidebar/StaffSidebar.jsx";
+
+import StaffSidebar from "../../Component/StaffSidebar/StaffSidebar";
+
 import "./StaffLayout.css";
 
 const StaffLayout = () => {
   return (
     <div className="staff-layout">
 
-      <Sidebar />
+      {/* SIDEBAR */}
+      <StaffSidebar />
 
+      {/* PAGE CONTENT */}
       <main className="staff-main">
         <Outlet />
       </main>

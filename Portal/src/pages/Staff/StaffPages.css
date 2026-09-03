@@ -1,0 +1,231 @@
+.staff-page {
+  padding: 30px;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #222;
+}
+
+.page-header p {
+  margin-top: 8px;
+  color: #777;
+}
+
+/* TABLE */
+
+.table-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #343a40;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f8f9fa;
+}
+
+/* ATTENDANCE */
+
+.attendance-date {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.attendance-date label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.attendance-date input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.present-btn,
+.absent-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.present-btn {
+  background: #28a745;
+  color: white;
+}
+
+.absent-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.attendance-status {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* MARKS */
+
+.marks-form {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.marks-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.marks-form label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.marks-form select,
+.marks-form input {
+  padding: 10px;
+  min-width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+td input {
+  padding: 8px;
+  width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 11px 22px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #0056b3;
+}
+
+/* SUBJECTS */
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.subject-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.subject-icon {
+  font-size: 35px;
+}
+
+.subject-card h2 {
+  margin: 15px 0;
+}
+
+.subject-card p {
+  color: #666;
+}
+
+/* PROFILE */
+
+.profile-card {
+  max-width: 700px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marks-form {
+    flex-direction: column;
+  }
+
+  .staff-page {
+    padding: 15px;
+  }
+}
