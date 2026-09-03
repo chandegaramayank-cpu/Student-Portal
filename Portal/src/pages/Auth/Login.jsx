@@ -1,29 +1,26 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useAuth } from "../../context/AuthContext";
 
 function Login() {
-  const Navigate = useNavigate();
-  
+  const navigate = useNavigate();
+  const { login } = useAuth();
+
   const [email, setEmail] = useState("");
   const [uniqueId, setUniqueId] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    //Admin--
-    if(email === "ADM@xyz.com" && uniqueId === "ADM-404"){
-      Navigate("/admin")
+    if (email === "ADM@xyz.com" && uniqueId === "ADM-404") {
+      login({ email, role: "admin" });
+      navigate("/admin");
       return;
+    }
 
-    //Hod--
-    } else if(email.startsWith("HOD") && uniqueId === "HOD-101"){
-      Navigate("/hod")
-      return;
-    
-    //Staff--
-    } else if(email.startsWith("STF") && uniqueId.startsWith("STF")){
-      Navigate("/staff")
+    if (email.startsWith("HOD") && uniqueId === "HOD-101") {
+      login({ email, role: "hod" });
+      navigate("/hod");
       return;
     }
 
@@ -33,10 +30,13 @@ function Login() {
       return;
     }
 
-
-    
+    if (email.endsWith(".com") && uniqueId.startsWith("STD")) {
+      login({ email, role: "student" });
+      navigate("/student");
+      return;
+    }
   };
-  
+
   return (
     <div className="login-page">
       <div className="login-card">

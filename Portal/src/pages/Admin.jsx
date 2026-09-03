@@ -1,15 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+//import LogoutButton from '../components/common/LogoutButton';
 
 function Admin() {
-  const navigate = useNavigate()
-  
-  const hendleLogout = ()=>{
-    navigate ("./Login")
-  }
   return (
     <div>
       <h1>Admin Page</h1>
-      <button onClick={hendleLogout}>LogOut</button>
+      
     </div>
   );
 }
