@@ -1,0 +1,144 @@
+.staff-sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #24140d;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+
+.staff-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.staff-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: #c58b5a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.staff-logo h2 {
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Menu */
+
+.staff-menu {
+  padding: 25px 15px;
+  flex: 1;
+}
+
+.menu-title {
+  font-size: 11px;
+  color: #a99589;
+  font-weight: 600;
+  margin: 0 10px 12px;
+  letter-spacing: 1px;
+}
+
+.settings-title {
+  margin-top: 30px;
+}
+
+/* Links */
+
+.staff-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  color: #d8cbc4;
+  padding: 13px 15px;
+  margin-bottom: 6px;
+  border-radius: 9px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.staff-link span {
+  width: 25px;
+  font-size: 18px;
+}
+
+.staff-link:hover {
+  background: #3a2419;
+  color: white;
+}
+
+.staff-link.active {
+  background: #9b633e;
+  color: white;
+  box-shadow: 0 5px 15px rgba(155, 99, 62, 0.25);
+}
+
+/* Logout */
+
+.logout-btn {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #d8cbc4;
+  padding: 13px 15px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+}
+
+.logout-btn:hover {
+  background: #3a2419;
+  color: #ffb3a7;
+}
+
+.logout-btn span {
+  width: 25px;
+  font-size: 18px;
+}
+
+/* Footer */
+
+.sidebar-footer {
+  padding: 18px;
+  text-align: center;
+  color: #8d786c;
+  font-size: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .staff-sidebar {
+    width: 210px;
+  }
+
+  .staff-logo {
+    padding: 0 15px;
+  }
+
+  .staff-logo h2 {
+    font-size: 17px;
+  }
+}

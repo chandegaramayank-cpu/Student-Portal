@@ -24,9 +24,9 @@ function Login() {
       return;
     }
 
-    if (email.startsWith("STF") && uniqueId.startsWith("STF")) {
-      login({ email, role: "staff" });
-      navigate("/staff");
+    //Student--
+    if(email.endsWith(".com") && uniqueId.startsWith("STD")){
+      Navigate("/Studentportal")
       return;
     }
 

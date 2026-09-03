@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.staff-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f1eb;
+}
+
+.staff-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  padding: 30px;
+}
